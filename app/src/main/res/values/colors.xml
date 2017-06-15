@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5D4037</color>
+    <color name="colorPrimaryDark">#3E2723</color>
+    <color name="colorAccent">#795548</color>
+    <color name="button">#FF7043</color>
+
+    // Pegs
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="magenta">#FF00FF</color>
+
+    // Hint Pegs
+    <color name="rightPegRightPlace">#000000</color>
+    <color name="rightPegWrongPlace">#FFFFFF</color>
+</resources>
