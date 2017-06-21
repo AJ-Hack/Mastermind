@@ -19,7 +19,8 @@
 
         <activity
             android:name=".NewGameActivity"
-            android:label="New Game">
+            android:label="New Game"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="ie.corktrainingcentre.mastermind.NewGameActivity" />
                 <category android:name="android.intent.category.DEFAULT"/>
