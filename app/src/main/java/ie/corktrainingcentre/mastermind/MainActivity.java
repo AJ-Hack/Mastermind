@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnNewGameClicked(View v) {
-        Log.d("btnNewGameClicked", "CLICKED");
         startActivity(new Intent(this, NewGameActivity.class));
     }
 
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnSettingsClicked(View v) {
-        Log.d("btnSettingsClicked", "CLICKED");
+        startActivity(new Intent(this, SettingsActivity.class));
     }
 
     public void btnHowToPlayClicked(View v) {
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnExitClicked(View v) {
-        Log.d("btnExitClicked", "CLICKED");
         System.exit(0);
     }
 }

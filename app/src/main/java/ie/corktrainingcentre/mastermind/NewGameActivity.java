@@ -106,6 +106,7 @@ public class NewGameActivity extends AppCompatActivity implements OnClickListene
     private TextView peg12_4;
     //endregion
 
+    // region Private Variables
     private long startTime;
     private long endtime;
     private long timeTaken;
@@ -113,7 +114,7 @@ public class NewGameActivity extends AppCompatActivity implements OnClickListene
     private long minutes;
     private long seconds;
 
-    LinearLayout lytCode;
+    private LinearLayout lytCode;
 
     private List<TableLayout> tables;
     private List<TextView> hints;
@@ -129,9 +130,9 @@ public class NewGameActivity extends AppCompatActivity implements OnClickListene
     private int currentRow = 1;
     private int currentPeg = 1;
     private int pegsSetSinceLastCheck = 0;
+    // endregion
 
-    int defaultColor;
-
+    // region onCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -142,9 +143,9 @@ public class NewGameActivity extends AppCompatActivity implements OnClickListene
 
         setupBoard();
     }
+    // endregion
 
-    // LISTENERS
-    
+    // region Listeners
     public void btnRedClicked(View v) {
         if (this.currentlySelectedPeg.getText().equals("1-1")) {
             this.startTime = currentTimeMillis();
@@ -326,9 +327,9 @@ public class NewGameActivity extends AppCompatActivity implements OnClickListene
             }
         }
     }
+    // endregion
     
-    // PRIVATE METHODS
-
+    // region Private Methods
     private void getNextPeg() {
 //        if (currentPeg < 4) {
 //            currentPeg++;
@@ -364,9 +365,6 @@ public class NewGameActivity extends AppCompatActivity implements OnClickListene
                 currentRow--;
                 currentPeg = 4;
             }
-            else {
-
-            }
         }
         currentlySelectedPeg = pegs.get(currentRow + "-" + currentPeg);
     }
@@ -394,7 +392,7 @@ public class NewGameActivity extends AppCompatActivity implements OnClickListene
     }
     
     private void populateTableLayoutList() {
-        this.tables = new ArrayList<TableLayout>();
+        this.tables = new ArrayList<>();
         this.tables.add(table1);
         this.tables.add(table2);
         this.tables.add(table3);
@@ -477,7 +475,7 @@ public class NewGameActivity extends AppCompatActivity implements OnClickListene
     }
     
     private void populatePegsMap() {
-        this.pegs = new HashMap<String, TextView>();
+        this.pegs = new HashMap<>();
         
         this.pegs.put("1-1", peg1_1);
         this.pegs.put("1-2", peg1_2);
@@ -812,4 +810,5 @@ public class NewGameActivity extends AppCompatActivity implements OnClickListene
             }
         }
     }
+    // endregion
 }
